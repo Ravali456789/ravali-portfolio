@@ -27,7 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. Mobile Menu Toggle and Smooth Scrolling Setup ---
     const navLinks = document.getElementById('navLinks');
-    const burgerMenu = document.getElementById('burgerMenu');
+    const burgerMenu = document.getElementById('burger');
+    if (burgerMenu && navLinks) {
+    burgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        burgerMenu.classList.toggle('active');
+    });
+}
+
     const allNavAnchors = document.querySelectorAll('.navbar a[href^="#"]');
     // FIX: Using querySelector('.navbar') is fine, but adding redundancy for robustness
     const navbar = document.querySelector('.navbar') || document.querySelector('header .container'); 

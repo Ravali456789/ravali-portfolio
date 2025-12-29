@@ -411,7 +411,18 @@ a:hover {
  */
 .about-section {
     background-color: #eeeeee;
-    padding: 60px 80px;
+    padding: 60px 20px;
+}
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 /* Title */
@@ -503,6 +514,16 @@ a:hover {
     background: linear-gradient(to right, #ff5722, #00bcd4);
     margin: 0 auto 60px;
     border-radius: 2px;
+}
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 20px;
+  }
+
+  .skills-card {
+    width: 100%;
+    max-width: 350px;
+  }
 }
 
 /* Layout */
@@ -653,6 +674,11 @@ a:hover {
     justify-content: flex-start;
     flex-wrap: wrap;
 }
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
@@ -717,6 +743,22 @@ a:hover {
   color: #fff;
   border-radius: 6px;
   background: linear-gradient(to right, #ff4500, #6b6b6b);
+}
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .item a {
+    word-break: break-all;
+  }
 }
 
 
@@ -983,4 +1025,60 @@ body.dark-mode .project-card * {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #ff7a00; /* optional */
+}
+@media (max-width: 768px) {
+
+  .hero-section {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-text .lead {
+    font-size: 1.1rem;
+  }
+
+  .hero-image {
+    margin-bottom: 25px;
+  }
+
+  .btn {
+    width: 90%;
+    justify-content: center;
+  }
+}
+/* HAMBURGER MENU */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* SHOW HAMBURGER ON MOBILE */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
 }
